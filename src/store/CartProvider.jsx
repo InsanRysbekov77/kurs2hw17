@@ -11,7 +11,7 @@ const CartReducer = (prevState, action) => {
 		const currentIndex = prevState.items.findIndex(
 			(el) => el.id === action.item.id,
 		)
-        
+
 		if (currentIndex === -1) {
 			const updateItems = prevState.items.concat(action.item)
 			const updateTotalAmount = prevState.totalAmount + action.item.price * action.item.amount
@@ -56,7 +56,7 @@ const CartProvider = (props) => {
 	return (
 		<CartContext.Provider value={cartContext}>
 			{props.children}
-		</CartContext.Provider>
+		</CartContext.Provider> 
 	)
 }
 export default CartProvider
